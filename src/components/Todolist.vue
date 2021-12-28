@@ -17,13 +17,14 @@
 </template>
 
 <script setup>
-import { ref, computed } from 'vue'
+import { ref, watchEffect, computed } from 'vue'
+import { useStorage } from '../utils/useStorage'
 
 let { title, todos, addTodo, clear, active, all, allDone } = useTodos()
 
 function useTodos() {
   let title = ref('')
-  let todos = ref([{ title: '学习vue', done: false }])
+  let todos = useStorage('todos', [])
 
   function addTodo() {
     todos.value.push({
