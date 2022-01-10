@@ -4,6 +4,7 @@ import About from '../pages/about.vue'
 import RateDemo from '../pages/RateDemo.vue'
 import Count from '../components/Count.vue'
 import Mouse from '../components/Mouse.vue'
+import Dialog from '../components/dialog/index.vue'
 
 const routes = [
   {
@@ -30,6 +31,11 @@ const routes = [
     path: '/mouse',
     name: 'Mouse',
     component: Mouse
+  },
+  {
+    path: '/dialog',
+    name: 'Dialog',
+    component: Dialog
   }
 ]
 
